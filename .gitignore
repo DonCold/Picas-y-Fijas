@@ -8,6 +8,8 @@ Historial.txt
 Records.txt
 
 .DS_Store
+*.local
+
+build
 dist
 dist-ssr
-*.local
