@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.7"
+  }
+}
