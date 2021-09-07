@@ -1,5 +1,3 @@
 # Ahorcado
 
-!["Logo de Ahorcado"](https://github.com/LuisFOsG/Ahorcado/blob/master/img/logo.png)
-
-* LuisFOsG
+!["Logo de Ahorcado"](https://github.com/DonCold/ejercicios/blob/master/Ahorcado/img/logo.png)
