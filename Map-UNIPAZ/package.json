@@ -1,0 +1,16 @@
+{
+  "name": "map-unipaz",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run copy",
+    "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
+    "copy": "copyfiles --up 3 node_modules/leaflet/dist/images/** dist/assets",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "copyfiles": "2.4.1",
+    "vite": "2.8.0"
+  }
+}
