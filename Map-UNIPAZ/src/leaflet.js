@@ -6,10 +6,10 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 
 import './styles.css'
 
-const center = [7.06758, -73.74541];
+const CENTER = [7.06758, -73.74541];
 
-const configLeaflet = {
-  center,
+const CONFIG_LEAFLET = {
+  center: CENTER,
   zoom: 17,
   minZoom: 15,
   attributionControl: true,
@@ -21,4 +21,4 @@ const configLeaflet = {
   ],
 }
 
-export const map = L.map('map', configLeaflet).setView(center);
+export const map = L.map('map', CONFIG_LEAFLET).setView(CENTER);
