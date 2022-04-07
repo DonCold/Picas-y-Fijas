@@ -1,16 +1,18 @@
 import { map } from './leaflet'
-import { LAYERS } from './layers'
+import './layers';
 
-const SHOW_LAYER = 'satelital'
+const info = L.control();
 
-let USE_LAYER = SHOW_LAYER.toLowerCase()
-USE_LAYER = LAYERS[USE_LAYER] ? USE_LAYER : 'default'
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create('div', 'info');
+  this.update();
+  return this._div;
+};
 
-const SETTINGS = {
-  id: LAYERS[USE_LAYER].id || '',
-  accessToken: LAYERS[USE_LAYER].token || '',
-  ext: LAYERS[USE_LAYER].ext || 'png',
-  attribution: '<a target="_blank" href="https://map-unipaz.surge.sh/">Mapa Unipaz</a>'
-}
+info.update = function (props) {
+  this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+    : 'Hover over a state');
+};
 
-L.tileLayer(LAYERS[USE_LAYER].url, SETTINGS).addTo(map);
+info.addTo(map);
