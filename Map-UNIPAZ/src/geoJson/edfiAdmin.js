@@ -1,11 +1,11 @@
 export const EDF_ADMIN = {
-  "type": "FeatureCollection",
-  "features": [
+  type: 'FeatureCollection',
+  features: [
     {
-      "type": "Feature",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
+      type: 'Feature',
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
           [
             [-73.74563746, 7.06980349],
             [-73.74564148, 7.06972763],
@@ -47,9 +47,9 @@ export const EDF_ADMIN = {
           ]
         ]
       },
-      "id": "8b037507-503e-4849-94af-ba5da641037e",
-      "properties": {
-          "name": "Edificio de aulas"
+      id: '8b037507-503e-4849-94af-ba5da641037e',
+      properties: {
+        name: 'Edificio de aulas'
       }
     }
   ]

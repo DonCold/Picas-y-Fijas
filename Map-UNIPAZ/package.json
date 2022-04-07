@@ -1,21 +1,24 @@
 {
   "name": "map-unipaz",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run copy",
+    "build": "vite build",
     "deploy": "npm run build && surge dist --domain https://map-unipaz.surge.sh",
-    "copy": "copyfiles --up 3 node_modules/leaflet/dist/images/** dist/assets",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "standard"
   },
   "devDependencies": {
-    "copyfiles": "2.4.1",
+    "standard": "16.0.4",
     "vite": "2.8.0",
     "vite-plugin-html": "3.2.0"
   },
   "dependencies": {
     "leaflet": "1.7.1",
     "leaflet-defaulticon-compatibility": "0.1.1"
+  },
+  "eslintConfig": {
+    "extends": "standard"
   }
 }
