@@ -6,12 +6,12 @@ import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 
 import './styles.css'
 
-const CENTER = [7.06758, -73.74541];
+const CENTER = [7.06758, -73.74541]; // Centro de UNIPAZ
 
 const CONFIG_LEAFLET = {
   center: CENTER,
   zoom: 17,
-  minZoom: 15,
+  minZoom: 14,
   attributionControl: true,
   maxBounds: [
     //south west
@@ -21,4 +21,4 @@ const CONFIG_LEAFLET = {
   ],
 }
 
-export const map = L.map('map', CONFIG_LEAFLET).setView(CENTER);
+export const map = L.map('map', CONFIG_LEAFLET).setView(CENTER); // Se crea el mapa
