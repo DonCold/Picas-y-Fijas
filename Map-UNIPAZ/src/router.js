@@ -1,4 +1,4 @@
-const PATHS = {
+/* const PATHS = {
   home: {
     path: '/',
     template: '<h1>Home</h1>'
@@ -7,4 +7,4 @@ const PATHS = {
     path: '/map',
     template: '<h1>Mapa</h1>'
   }
-}
+} */

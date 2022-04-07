@@ -17,7 +17,7 @@ export const LAYERS = {
 
 const ATTRIBUTION = '© <a target="_blank" href="https://map-unipaz.surge.sh/">Mapa Unipaz</a>'
 
-const LAYER_DEFINE = {} // Se define un objeto vacio para guardar los objetos de las capas
+const LAYERS_DEFINE = {}
 
 Object.entries(LAYERS).forEach(([key, value]) => {
   const SETTINGS = {
@@ -28,7 +28,9 @@ Object.entries(LAYERS).forEach(([key, value]) => {
   }
 
   const newLayer = Lft.tileLayer(value.url, SETTINGS).addTo(map)
-  LAYER_DEFINE[key] = newLayer // Se guarda en el objeto de capas
+  LAYERS_DEFINE[key] = newLayer // Se guarda en el objeto de capas
 })
 
-Lft.control.layers(LAYER_DEFINE).addTo(map) // Se agrega el control de capas al mapa
+Lft.control.layers(LAYERS_DEFINE, null, {
+  position: 'bottomright'
+}).addTo(map)
