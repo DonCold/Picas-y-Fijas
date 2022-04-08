@@ -1,6 +1,6 @@
 /* eslint-disable no-return-assign */
 import { map, Lft } from './leaflet'
-import { UNIPAZ } from './index.js'
+import { UNIPAZ } from './graphMap'
 
 /* Muestra la Información como Hover */
 
@@ -25,8 +25,8 @@ info.addTo(map)
 
 /* Muestra la Información Desplegada */
 
-function borderbox (event) {
-  const layer = event.target
+function borderbox (e) {
+  const layer = e.target
 
   layer.setStyle({
     weight: 1,
@@ -39,13 +39,14 @@ function borderbox (event) {
   info.update(layer.feature.properties)
 }
 
-function resetBorderBox (event) {
-  UNIPAZ.resetStyle(event.target)
+function resetBorderBox (e) {
+  UNIPAZ.resetStyle(e.target)
+
   info.update()
 }
 
-function zoomToFeature (event) {
-  map.fitBounds(event.target.getBounds())
+function zoomToFeature (e) {
+  map.fitBounds(e.target.getBounds())
 }
 
 export const onEachFeature = (feature, layer) => {
@@ -55,5 +56,6 @@ export const onEachFeature = (feature, layer) => {
     click: zoomToFeature
   })
 
-  layer.bindPopup('<strong>Edificio: </strong>' + feature.properties.name + '<br/>')
+  const message = `<strong>Edificio: </strong>${feature.properties.name}`
+  layer.bindPopup(message)
 }

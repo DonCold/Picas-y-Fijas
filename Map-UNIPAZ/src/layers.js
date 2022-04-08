@@ -1,5 +1,6 @@
 /* eslint-disable quote-props */
 import { map, Lft } from './leaflet'
+import { MARK_LOCATIONS } from './graphMap'
 
 export const LAYERS = {
   'Satelital': {
@@ -17,6 +18,8 @@ export const LAYERS = {
 
 const ATTRIBUTION = '© <a target="_blank" href="https://map-unipaz.surge.sh/">Mapa Unipaz</a>'
 
+/* Creación de las Capas */
+
 const LAYERS_DEFINE = {}
 
 Object.entries(LAYERS).forEach(([key, value]) => {
@@ -31,6 +34,6 @@ Object.entries(LAYERS).forEach(([key, value]) => {
   LAYERS_DEFINE[key] = newLayer // Se guarda en el objeto de capas
 })
 
-Lft.control.layers(LAYERS_DEFINE, null, {
+Lft.control.layers(LAYERS_DEFINE, MARK_LOCATIONS, {
   position: 'bottomright'
 }).addTo(map)
