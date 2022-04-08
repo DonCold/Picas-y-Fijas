@@ -4,7 +4,7 @@ import { UNIPAZ } from './graphMap'
 
 /* Muestra la Información como Hover */
 
-const info = Lft.control()
+export const info = Lft.control()
 
 info.onAdd = function (map) {
   this._div = Lft.DomUtil.create('div', 'info')
@@ -22,6 +22,14 @@ info.update = function (props) {
 }
 
 info.addTo(map)
+
+map.on('overlayadd', function (eo) {
+  if (eo.name === 'InformaciónUnipaz') info.addTo(map)
+})
+
+map.on('overlayremove', function (eo) {
+  if (eo.name === 'InformaciónUnipaz') info.remove()
+})
 
 /* Muestra la Información Desplegada */
 
