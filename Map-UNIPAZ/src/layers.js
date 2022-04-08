@@ -2,17 +2,19 @@
 import { map, Lft } from './leaflet'
 import { MARK_LOCATIONS } from './graphMap'
 
+const DEFAULT_LAYER = 'Por Defecto'
+
 export const LAYERS = {
-  'Satelital': {
-    url: 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
-    id: 'mapbox/satellite-v9',
-    token: import.meta.env.VITE_MAPBOXTOKEN
+  'Por Defecto': {
+    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
   },
   'Modo Oscuro': {
     url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png'
   },
-  'Por Defecto': {
-    url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  'Satelital': {
+    url: 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+    id: 'mapbox/satellite-v9',
+    token: import.meta.env.VITE_MAPBOXTOKEN
   }
 }
 
@@ -30,9 +32,11 @@ Object.entries(LAYERS).forEach(([key, value]) => {
     attribution: ATTRIBUTION
   }
 
-  const newLayer = Lft.tileLayer(value.url, SETTINGS).addTo(map)
+  const newLayer = Lft.tileLayer(value.url, SETTINGS)
   LAYERS_DEFINE[key] = newLayer // Se guarda en el objeto de capas
 })
+
+LAYERS_DEFINE[DEFAULT_LAYER].addTo(map) // Se agrega la capa por defecto
 
 Lft.control.layers(LAYERS_DEFINE, MARK_LOCATIONS, {
   position: 'bottomright'
