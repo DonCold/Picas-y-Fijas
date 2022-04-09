@@ -1,8 +1,11 @@
 /* eslint-disable quote-props */
 import { map, Lft } from './leaflet'
+
+import { getConfigStorage, setConfigStorage } from './storage'
+
 import { MARK_LOCATIONS } from './graphMap'
 
-const DEFAULT_LAYER = 'Por Defecto'
+const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
 
 export const LAYERS = {
   'Por Defecto': {
@@ -41,3 +44,7 @@ LAYERS_DEFINE[DEFAULT_LAYER].addTo(map) // Se agrega la capa por defecto
 Lft.control.layers(LAYERS_DEFINE, MARK_LOCATIONS, {
   position: 'bottomright'
 }).addTo(map)
+
+map.on('baselayerchange', (e) => {
+  setConfigStorage({ defaultLayer: e.name })
+})

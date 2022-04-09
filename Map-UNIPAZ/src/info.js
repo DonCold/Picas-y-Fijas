@@ -2,6 +2,8 @@
 import { map, Lft } from './leaflet'
 import { UNIPAZ } from './graphMap'
 
+import { getConfigStorage, setConfigStorage } from './storage'
+
 /* Muestra la Información como Hover */
 
 export const info = Lft.control()
@@ -21,14 +23,22 @@ info.update = function (props) {
   this._div.innerHTML = `${showMessage} <strong>Edificio: </strong>${name}`
 }
 
-info.addTo(map)
+getConfigStorage()?.showInfo && info.addTo(map)
 
 map.on('overlayadd', function (eo) {
-  if (eo.name === 'InformaciónUnipaz') info.addTo(map)
+  if (eo.name === 'InformaciónUnipaz') {
+    info.addTo(map)
+    setConfigStorage({ showInfo: true })
+  }
+  if (eo.name === 'Retorno') setConfigStorage({ retorno: true })
 })
 
 map.on('overlayremove', function (eo) {
-  if (eo.name === 'InformaciónUnipaz') info.remove()
+  if (eo.name === 'InformaciónUnipaz') {
+    info.remove()
+    setConfigStorage({ showInfo: false })
+  }
+  if (eo.name === 'Retorno') setConfigStorage({ retorno: false })
 })
 
 /* Muestra la Información Desplegada */
