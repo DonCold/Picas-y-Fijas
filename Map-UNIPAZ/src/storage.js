@@ -1,5 +1,8 @@
+const defaultStorage = { defaultLayer: 'Por Defecto', showInfo: true, retorno: true }
+
 export const getConfigStorage = () => {
-  return JSON.parse(window.localStorage.getItem('config'))
+  const config = JSON.parse(window.localStorage.getItem('config'))
+  return config || defaultStorage
 }
 
 export const setConfigStorage = (config) => {

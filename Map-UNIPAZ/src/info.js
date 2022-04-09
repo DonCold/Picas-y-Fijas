@@ -1,15 +1,15 @@
 /* eslint-disable no-return-assign */
-import { map, Lft } from './leaflet'
+import { map, L } from './leaflet'
 import { UNIPAZ } from './graphMap'
 
 import { getConfigStorage, setConfigStorage } from './storage'
 
 /* Muestra la Información como Hover */
 
-export const info = Lft.control()
+export const info = L.control()
 
 info.onAdd = function (map) {
-  this._div = Lft.DomUtil.create('div', 'info')
+  this._div = L.DomUtil.create('div', 'info')
   this.update()
   return this._div
 }

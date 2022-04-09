@@ -1,4 +1,4 @@
-import { map, Lft } from './leaflet'
+import { map, L } from './leaflet'
 
 import { getConfigStorage } from './storage'
 
@@ -7,10 +7,10 @@ import { UNIPAZ_LOCATIONS } from './geoJson/unipaz'
 
 const configStorage = getConfigStorage()
 
-const RETORNO = Lft.marker([7.071283672458979, -73.73667776584625])
+const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
   .bindPopup('Retorno a la Universidad')
 
-export const UNIPAZ = Lft.geoJson(UNIPAZ_LOCATIONS, {
+export const UNIPAZ = L.geoJson(UNIPAZ_LOCATIONS, {
   onEachFeature
 })
 

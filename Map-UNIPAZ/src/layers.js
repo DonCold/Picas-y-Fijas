@@ -1,8 +1,6 @@
 /* eslint-disable quote-props */
-import { map, Lft } from './leaflet'
-
+import { map, L } from './leaflet'
 import { getConfigStorage, setConfigStorage } from './storage'
-
 import { MARK_LOCATIONS } from './graphMap'
 
 const DEFAULT_LAYER = getConfigStorage()?.defaultLayer || 'Por Defecto'
@@ -35,14 +33,19 @@ Object.entries(LAYERS).forEach(([key, value]) => {
     attribution: ATTRIBUTION
   }
 
-  const newLayer = Lft.tileLayer(value.url, SETTINGS)
+  const newLayer = L.tileLayer(value.url, SETTINGS)
   LAYERS_DEFINE[key] = newLayer // Se guarda en el objeto de capas
 })
 
 LAYERS_DEFINE[DEFAULT_LAYER].addTo(map) // Se agrega la capa por defecto
 
-Lft.control.layers(LAYERS_DEFINE, MARK_LOCATIONS, {
+L.control.layers.minimap(LAYERS_DEFINE, null, {
   position: 'bottomright'
+}).addTo(map)
+
+L.control.layers(null, MARK_LOCATIONS, {
+  position: 'bottomright',
+  collapsed: false
 }).addTo(map)
 
 map.on('baselayerchange', (e) => {

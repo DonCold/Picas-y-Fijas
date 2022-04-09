@@ -1,8 +1,11 @@
 import 'leaflet/dist/leaflet.css'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css'
 
-import * as L from 'leaflet'
+import * as Lft from 'leaflet'
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility'
+
+import 'leaflet.layerscontrol-minimap/control.layers.minimap.css'
+import 'leaflet.layerscontrol-minimap'
 
 import './styles.css'
 
@@ -16,9 +19,11 @@ const CONFIG_LEAFLET = {
   center: CENTER,
   zoom: 17,
   minZoom: 14,
+  zoomDelta: 0.25,
+  zoomSnap: 0,
   attributionControl: true,
   maxBounds: BOUNDS
 }
 
-export const map = L.map('map', CONFIG_LEAFLET).setView(CENTER) // Se crea el mapa
-export const Lft = L // Se exporta el objeto Leaflet
+export const map = Lft.map('map', CONFIG_LEAFLET).setView(CENTER) // Se crea el mapa
+export const L = Lft // Se exporta el objeto Leaflet
