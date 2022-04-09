@@ -43,21 +43,22 @@ map.on('overlayremove', function (eo) {
 
 /* Muestra la Información Desplegada */
 
-function borderbox (e) {
+function styleHover (e) {
   const layer = e.target
+  const properties = layer.feature.properties
 
   layer.setStyle({
-    weight: 1,
-    color: '#17202A',
-    dashArray: '',
-    fillOpacity: 0.7,
-    id: 'test'
+    weight: 2,
+    fillColor: properties.hoverFillColor || properties.fillColor,
+    color: properties.hoverColor || '#17202A',
+    dashArray: '3',
+    fillOpacity: 0.7
   })
 
-  info.update(layer.feature.properties)
+  info.update(properties)
 }
 
-function resetBorderBox (e) {
+function resetStyleHover (e) {
   UNIPAZ.resetStyle(e.target)
 
   info.update()
@@ -69,8 +70,8 @@ function zoomToFeature (e) {
 
 export const onEachFeature = (feature, layer) => {
   layer.on({
-    mouseover: borderbox,
-    mouseout: resetBorderBox,
+    mouseover: styleHover,
+    mouseout: resetStyleHover,
     click: zoomToFeature
   })
 

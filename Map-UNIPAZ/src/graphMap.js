@@ -7,11 +7,23 @@ import { UNIPAZ_LOCATIONS } from './geoJson/unipaz'
 
 const configStorage = getConfigStorage()
 
+const style = (feature) => {
+  return {
+    fillColor: feature.properties.fillColor || '#87DF6A',
+    fillOpacity: 0.6,
+    weight: 2,
+    opacity: 1,
+    color: feature.properties.color || 'white',
+    dashArray: '3'
+  }
+}
+
 const RETORNO = L.marker([7.071283672458979, -73.73667776584625])
   .bindPopup('Retorno a la Universidad')
 
 export const UNIPAZ = L.geoJson(UNIPAZ_LOCATIONS, {
-  onEachFeature
+  onEachFeature,
+  style
 })
 
 configStorage?.retorno && RETORNO.addTo(map)

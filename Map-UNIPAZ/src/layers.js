@@ -1,5 +1,6 @@
 /* eslint-disable quote-props */
 import { map, L } from './leaflet'
+
 import { getConfigStorage, setConfigStorage } from './storage'
 import { MARK_LOCATIONS } from './graphMap'
 
@@ -39,13 +40,13 @@ Object.entries(LAYERS).forEach(([key, value]) => {
 
 LAYERS_DEFINE[DEFAULT_LAYER].addTo(map) // Se agrega la capa por defecto
 
-L.control.layers.minimap(LAYERS_DEFINE, null, {
-  position: 'bottomright'
-}).addTo(map)
-
 L.control.layers(null, MARK_LOCATIONS, {
   position: 'bottomright',
   collapsed: false
+}).addTo(map)
+
+L.control.layers.minimap(LAYERS_DEFINE, null, {
+  position: 'bottomright'
 }).addTo(map)
 
 map.on('baselayerchange', (e) => {

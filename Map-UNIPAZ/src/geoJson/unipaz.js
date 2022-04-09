@@ -7,17 +7,53 @@ export const UNIPAZ_LOCATIONS = {
         type: 'Polygon',
         coordinates: [
           [
-            [-73.74564551, 7.06983264],
-            [-73.74497629, 7.0698007],
-            [-73.74499373, 7.06948261],
-            [-73.74568172, 7.06950258],
-            [-73.74564551, 7.06983264]
+            [-73.74563746, 7.06980349],
+            [-73.74564148, 7.06972763],
+            [-73.74565489, 7.06972896],
+            [-73.74565758, 7.06961184],
+            [-73.74563746, 7.06961184],
+            [-73.74565489, 7.06953199],
+            [-73.74558381, 7.06952933],
+            [-73.74557845, 7.06951069],
+            [-73.74542288, 7.0695067],
+            [-73.74542422, 7.06952267],
+            [-73.74534912, 7.06952533],
+            [-73.74533705, 7.06955994],
+            [-73.74531023, 7.06955861],
+            [-73.74530755, 7.06952001],
+            [-73.74523513, 7.06951602],
+            [-73.74523379, 7.06949073],
+            [-73.74506883, 7.06948141],
+            [-73.74507554, 7.0695067],
+            [-73.74500982, 7.06950005],
+            [-73.74500312, 7.06958789],
+            [-73.744983, 7.06958522],
+            [-73.74498568, 7.0696877],
+            [-73.74500446, 7.06968903],
+            [-73.74499105, 7.06977022],
+            [-73.74506213, 7.06977421],
+            [-73.74506749, 7.06979817],
+            [-73.74520026, 7.0697995],
+            [-73.74520026, 7.0697822],
+            [-73.7452928, 7.06979018],
+            [-73.74530755, 7.06974227],
+            [-73.74533839, 7.06974493],
+            [-73.74533303, 7.06980083],
+            [-73.74541081, 7.06980482],
+            [-73.74541081, 7.06982212],
+            [-73.74556638, 7.06982878],
+            [-73.74556638, 7.06980615],
+            [-73.74563746, 7.06980349]
           ]
         ]
       },
       id: 'a9e3804d-07cb-4e2d-86a2-2cd402386e5b',
       properties: {
-        name: 'Edificio de Aulas'
+        name: 'Edificio de Aulas',
+        fillColor: '#2196f3',
+        color: 'white',
+        hoverColor: '#1D669C',
+        hoverFillColor: '#558BB4'
       }
     },
     {
@@ -36,7 +72,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '2059baf0-b2d5-49f2-b9b3-cf22e312b4d9',
       properties: {
-        name: 'Edificio Administrativo'
+        name: 'Edificio Administrativo',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -55,7 +95,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'f4df7b39-2337-427b-b7bd-b0135985d433',
       properties: {
-        name: 'Biblioteca, Auditorio, Salas de Informatica'
+        name: 'Biblioteca, Auditorio, Salas de Informatica',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -76,7 +120,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '9671f54c-a98c-4dc9-9322-f87e9bf9bdac',
       properties: {
-        name: 'Plazoleta de la Paz'
+        name: 'Plazoleta de la Paz',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -95,7 +143,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '03e8820a-56ea-40de-8cbe-dbe59758ef19',
       properties: {
-        name: 'Aula 1'
+        name: 'Aula 1',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -114,7 +166,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'eceb6281-b1e0-4b54-a5cd-e9f521cbee76',
       properties: {
-        name: 'Parqueadero Estudiantil'
+        name: 'Parqueadero Estudiantil',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -133,7 +189,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '956ba5b6-6180-4d8c-971e-1eb04bbb9c3a',
       properties: {
-        name: 'Rotonda'
+        name: 'Rotonda',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -158,7 +218,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'a037b8dc-fb5d-472c-9cd7-f62877680356',
       properties: {
-        name: 'Cafeteria La Tia'
+        name: 'Cafeteria La Tia',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -177,7 +241,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '5b986427-b620-4602-bcdf-9db4f169f6f0',
       properties: {
-        name: 'Parqueadero Administrativo 2'
+        name: 'Parqueadero Administrativo 2',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -196,7 +264,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '5b986427-b620-4602-bcdf-9db4f169f6f0',
       properties: {
-        name: 'Parqueadero Administrativo 2'
+        name: 'Parqueadero Administrativo 2',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -217,7 +289,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'c755bda3-f8ee-496d-9e67-a3a43bb83b1a',
       properties: {
-        name: 'Cafeteria'
+        name: 'Cafeteria',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -236,7 +312,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: '6caae6d9-af00-4a2c-b927-fe53eae63045',
       properties: {
-        name: 'Parqueadero Administrativo 1'
+        name: 'Parqueadero Administrativo 1',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -255,7 +335,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'e43222ed-b1c4-40dd-8e10-2834b2779d78',
       properties: {
-        name: 'Cancha Voleibol 1'
+        name: 'Cancha Voleibol 1',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     },
     {
@@ -274,7 +358,11 @@ export const UNIPAZ_LOCATIONS = {
       },
       id: 'a47bae9a-cfb6-4f45-8901-10545345c82d',
       properties: {
-        name: 'Gimnasio'
+        name: 'Gimnasio',
+        fillColor: '#87DF6A',
+        color: 'white',
+        hoverColor: '#17202A',
+        hoverFillColor: '#87DF6A'
       }
     }
   ]

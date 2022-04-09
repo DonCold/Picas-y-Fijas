@@ -19,8 +19,8 @@ const CONFIG_LEAFLET = {
   center: CENTER,
   zoom: 17,
   minZoom: 14,
-  zoomDelta: 0.25,
-  zoomSnap: 0,
+  /*   zoomDelta: 0.25,
+  zoomSnap: 0, */
   attributionControl: true,
   maxBounds: BOUNDS
 }
