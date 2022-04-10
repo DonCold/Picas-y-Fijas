@@ -1,6 +1,7 @@
 {
   "name": "map-unipaz",
   "private": true,
+  "type": "module",
   "version": "0.1.0",
   "scripts": {
     "co": "npm run lint && git add . && sui-mono commit",
@@ -17,9 +18,10 @@
     "vite-plugin-html": "3.2.0"
   },
   "dependencies": {
+    "import-meta-resolve": "1.1.1",
     "leaflet": "1.7.1",
     "leaflet-defaulticon-compatibility": "0.1.1",
-    "leaflet.layerscontrol-minimap": "^1.0.21"
+    "leaflet.layerscontrol-minimap": "1.0.21"
   },
   "eslintConfig": {
     "extends": "standard",
