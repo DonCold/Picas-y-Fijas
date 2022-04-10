@@ -12,7 +12,7 @@ const style = (feature) => {
     fillColor: feature.properties.fillColor || '#87DF6A',
     fillOpacity: 0.6,
     weight: 2,
-    opacity: 1,
+    opacity: feature.properties.opacity || 0,
     color: feature.properties.color || 'white',
     dashArray: '3'
   }

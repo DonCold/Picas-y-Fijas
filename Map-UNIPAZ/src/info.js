@@ -17,10 +17,14 @@ info.onAdd = function (map) {
 info.update = function (props) {
   const showMessage = '<h4>UNIPAZ - Información</h4>'
 
-  if (!props) return this._div.innerHTML = `${showMessage} Pasa el cursor sobre un lugar`
+  if (!props) return this._div.innerHTML = `${showMessage} <small class="center"><i>Pasa el cursor sobre un lugar</i></small>`
 
   const { name } = props
-  this._div.innerHTML = `${showMessage} <strong>Edificio: </strong>${name}`
+  this._div.innerHTML = `
+    ${showMessage}
+    <strong>Edificio: </strong>${name}<br>
+    <small class="center"><i>Click para saber más</i></small>
+  `
 }
 
 getConfigStorage()?.showInfo && info.addTo(map)
@@ -52,7 +56,7 @@ function styleHover (e) {
     fillColor: properties.hoverFillColor || properties.fillColor,
     color: properties.hoverColor || '#17202A',
     dashArray: '3',
-    fillOpacity: 0.7
+    opacity: 1
   })
 
   info.update(properties)
