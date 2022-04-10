@@ -1,5 +1,4 @@
-
-import * as DELIMITS from './delimits/delimit'
+import * as DELIMITS from './delimits'
 
 const DELIMITS_ARRAY = []
 
