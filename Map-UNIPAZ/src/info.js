@@ -15,6 +15,7 @@ info.onAdd = function (map) {
 }
 
 info.update = function (props) {
+  if (!this._div) return
   const showMessage = '<h4>UNIPAZ - Información</h4>'
 
   if (!props) return this._div.innerHTML = `${showMessage} <small class="center"><i>Pasa el cursor sobre un lugar</i></small>`
@@ -59,13 +60,13 @@ function styleHover (e) {
     opacity: 1
   })
 
-  info.update(properties)
+  info?.update(properties)
 }
 
 function resetStyleHover (e) {
   UNIPAZ.resetStyle(e.target)
 
-  info.update()
+  info?.update()
 }
 
 function zoomToFeature (e) {
@@ -87,4 +88,15 @@ export const onEachFeature = (feature, layer) => {
   `
 
   layer.bindPopup(message)
+}
+
+export const style = (feature) => {
+  return {
+    fillColor: feature.properties.fillColor || '#87DF6A',
+    fillOpacity: 0.6,
+    weight: 2,
+    opacity: feature.properties.opacity || 0,
+    color: feature.properties.color || 'white',
+    dashArray: '3'
+  }
 }

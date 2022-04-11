@@ -14,7 +14,7 @@ export const EDIF_ADMIN = {
   },
   id: '2059baf0-b2d5-49f2-b9b3-cf22e312b4d9',
   properties: {
-    name: 'Edificio Administrativo',
+    name: 'Area Administrativa, Departamentos y Escuelas',
     fillColor: '#87DF6A',
     color: 'white',
     hoverColor: '#17202A',

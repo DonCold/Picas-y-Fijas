@@ -55,10 +55,10 @@ export const EDIF_AULAS = {
   properties: {
     name: 'Edificio de Aulas',
     html: HTML,
-    fillColor: '#2196f3',
+    fillColor: '#87DF6A',
     color: 'white',
-    hoverColor: '#1D669C',
-    hoverFillColor: '#558BB4',
+    hoverColor: '#17202A',
+    hoverFillColor: '#87DF6A',
     opacity: 0.5
   }
 }

@@ -32,3 +32,43 @@ select.update = function () {
 }
 
 select.addTo(map)
+
+const selectLocation = document.getElementById('select-location')
+let selectedLocation = null
+let time = null
+
+selectLocation.addEventListener('change', async function (e) {
+  const { onEachFeature } = await import('./info')
+  if (selectedLocation) {
+    selectedLocation.remove()
+    time && clearTimeout(time)
+  }
+
+  const id = e.target.value
+  selectLocation.value = 'default'
+
+  const LOCATIONS = DELIMITS_ARRAY.filter(item => item.id === id)
+
+  const geoJsonLocation = {
+    type: 'FeatureCollection',
+    features: [
+      ...LOCATIONS
+    ]
+  }
+
+  selectedLocation = L.geoJson(geoJsonLocation, {
+    onEachFeature
+  })
+
+  selectedLocation.addTo(map)
+
+  selectedLocation.eachLayer(function (layer) {
+    layer.openPopup()
+  })
+
+  map.flyTo(selectedLocation.getBounds().getCenter(), 18)
+
+  time = setTimeout(() => {
+    if (selectedLocation) selectedLocation.remove()
+  }, 10000)
+})
