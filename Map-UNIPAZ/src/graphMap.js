@@ -2,7 +2,9 @@ import { map, L } from './leaflet'
 
 import { getConfigStorage } from './storage'
 
+import './select'
 import { onEachFeature } from './info'
+
 import { UNIPAZ_LOCATIONS } from './geoJson/unipaz'
 
 const configStorage = getConfigStorage()

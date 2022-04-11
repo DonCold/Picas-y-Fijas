@@ -1,6 +1,6 @@
 import * as DELIMITS from './delimits'
 
-const DELIMITS_ARRAY = []
+export const DELIMITS_ARRAY = []
 
 for (const i of Object.entries(DELIMITS)) {
   DELIMITS_ARRAY.push(i[1])
