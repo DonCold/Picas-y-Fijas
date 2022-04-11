@@ -1,3 +1,10 @@
+const HTML = `
+  <div class="center">
+    <h3>{{ title }}</h3>
+    <img class="images-popup" src="/images/edifAulas.JPG" alt="Edificio de Aulas" />
+  </div>
+`
+
 export const EDIF_AULAS = {
   type: 'Feature',
   geometry: {
@@ -47,6 +54,7 @@ export const EDIF_AULAS = {
   id: 'a9e3804d-07cb-4e2d-86a2-2cd402386e5b',
   properties: {
     name: 'Edificio de Aulas',
+    html: HTML,
     fillColor: '#2196f3',
     color: 'white',
     hoverColor: '#1D669C',

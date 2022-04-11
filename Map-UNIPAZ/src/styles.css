@@ -40,3 +40,8 @@ body {
   color: #777;
   text-align: center;
 }
+
+.images-popup {
+  width: 250px;
+  height: auto;
+}

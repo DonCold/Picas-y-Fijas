@@ -79,6 +79,12 @@ export const onEachFeature = (feature, layer) => {
     click: zoomToFeature
   })
 
-  const message = `<strong>Edificio: </strong>${feature.properties.name}`
+  const message = `
+    ${
+      feature.properties.html?.replace('{{ title }}', feature.properties.name) ||
+      `<strong>Edificio</strong>: ${feature.properties.name}`
+    }
+  `
+
   layer.bindPopup(message)
 }

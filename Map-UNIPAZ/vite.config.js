@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
 export default defineConfig({
+  publicDir: 'assets',
   plugins: [
     createHtmlPlugin({
       minify: true
@@ -10,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': 'src',
-      '#': './'
+      '#': './assets'
     }
   }
 })
