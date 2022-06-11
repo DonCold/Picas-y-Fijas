@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/react.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React | ¿Por qué utilizar React?</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/content.css">
+
+  </head>
+  <body>
+
+    <header class="menu">
+      <div class="menu-container">
+        <div class="menu-title">
+          <a href="/" class="link-title">
+            <div class="menu-img">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="react-logo">
+            </div>
+            <span class="menu-react">React</span>
+          </a>
+        </div>
+
+        <ul class="menu-options">
+          <li class="menu-option">
+            <a class="link" href="#playground">Playground</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner-content">
+        <h1 class="banner-title">React</h1>
+        <h3>¿Por qué Utilizarlo?</h3>
+        <p class="banner-description">Una biblioteca de JavaScript para construir interfaces de usuario</p>
+        <a target="_blank" href="https://es.reactjs.org/" class="banner-button">Documentación</a>
+      </div>
+    </div>
+
+    <main class="content">
+
+      <div class="content-row">
+        <div class="content-col">
+          <h2 class="content-title">¿Qué es React?</h2>
+          Es una librería <strong>open source</strong> de JavaScript para desarrollar interfaces de usuario. <br><br>
+          Fue lanzada en el año 2013 y desarrollada por <strong>Facebook</strong>, quienes también la mantienen actualmente junto a una <strong>comunidad de desarrolladores</strong> independientes y compañías.
+        </div>
+
+        <div class="content-img">
+          <img src="./img/facebook.jpg" alt="Imagen de Facebook">
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="content-img">
+          <img src="./img/components.png" alt="Componentes de React">
+        </div>
+
+        <div class="content-col">
+          <h2 class="content-title">Componentes de React</h2>
+          Los componentes permiten separar la <strong>interfaz de usuario</strong> en piezas independientes, <strong>reutilizables</strong> y pensar en cada pieza de forma aislada. <br><br>
+          Son como las funciones de JavaScript. Aceptan entradas arbitrarias (llamadas “props”) y retornan elementos de React que describen lo que debe <strong>aparecer en la pantalla</strong>.
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="content-col">
+          <h2 class="content-title">Rendimiento y Flexibilidad</h2>
+          Trabajar con cualquier otro Stack que necesitemos no es un problema.<br>
+          Al ser una librería y estar enfocada en una sola cosa, <strong>es fácil de usar</strong> y <strong>muy rápido</strong>. <br><br>
+          Incorpora un <strong>Virtual DOM</strong> para la optimización del DOM.
+        </div>
+
+        <div class="content-img">
+          <img src="./img/performance.png" alt="Rendimiento">
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="content-img">
+          <img src="./img/react-native.png" alt="React Native">
+        </div>
+
+        <div class="content-col">
+          <h2 class="content-title">React Native</h2>
+          También podemos llevar todo el Poder de <strong>React</strong> a las aplicaciones móviles.
+          <br><i>Teniendo las capacidades de la Plataforma Nativa.</i> <br><br>
+          Se utiliza principalmente para desarrollar aplicaciones para <strong>Android e iOS</strong>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="content-col">
+          <h2 class="content-title">React 360</h2>
+          Basado en <strong>Three.js</strong>, React 360 permite crear <strong>aplicaciones 360</strong> con React. <br><br>
+          Aprovechando las tecnologías web y el ecosistema React existente, React 360 tiene como objetivo simplificar la construcción de experiencias 360 multiplataforma.
+        </div>
+
+        <div class="content-img">
+          <img src="./img/react-360.png" alt="React 360">
+        </div>
+      </div>
+
+      <div class="content-row">
+          <div class="content-multiply">
+            <img src="img/without-jsx.png" alt="Sin JSX">
+
+            <div class="content-first">
+              <h2 class="content-title">Presentando JSX</h2>
+              No es ni un string ni HTML.
+            </div>
+
+            <img src="img/with-jsx.png" alt="Con JSX">
+          </div>
+      </div>
+
+      <h2 class="content-title playground" id="playground">PLAYGROUND</h2>
+      <div class="content-row">
+        <div id="hello-world" class="content-img content-code"></div>
+
+        <div class="content-col">
+          <textarea class="code-mirror" id="script_once_code">
+const App = () => {
+  const saludo = "Hola Mundo"
+
+  return (
+    <div>
+        <h1>{ saludo }</h1>
+    </div>
+  );
+}
+</textarea>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="contributors">
+        <p><a class="footer-link" target="_blank" href="https://github.com/LuisFOsG">Luis Osorio</a> - <a class="footer-link" target="_blank" href="https://github.com/BryanSMC">Bryan Muñoz</a></p>
+      </div>
+
+      <div class="info">
+        <div class="info-content">
+          Construido con HTML y CSS, Inspirados en el diseño de la Guia Oficial de React JS<br><br>
+          <span class="copy">Copyright © 2022 Unipaz, Edu.</span>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<!-- Code Mirror - Para el Editor de codigo -->
+<link rel="stylesheet" href="lib/codemirror.css">
+<script src="lib/codemirror.js"></script>
+
+<!-- Para la Compilación del Codigo de React B) -->
+<script src="lib/compile-react.js" crossorigin></script>
+<script src="lib/compile-babel.js"></script>
+
+<!-- Compilador de Codigo React :) -->
+
+<script type="text/babel">
+  function compile(code, domElement) {
+    try {
+      code = Babel.transform(code, { presets: ["es2015", "react"] });
+
+      const script = document.createElement('script');
+      script.textContent = code.code;
+      domElement.appendChild(script);
+
+      ReactDOM.render(<App/>, domElement);
+      try {
+        domElement.removeChild(script);
+        App = null;
+      } catch (e) {}
+    } catch (e) {
+      const remember = "Recuerde que es necesario tener un componente llamado";
+      ReactDOM.render(
+        <div>
+          <strong>Error: </strong> <span>{e.name}</span><br/><br/>
+          <strong>Mensaje: </strong> {e.message}<br/><br/>
+          <i><small>{remember} <strong>App</strong></small></i>
+        </div>,
+        domElement
+      );
+    }
+  }
+</script>
+
+<!-- Iniciamos el Editor de Codigo :) -->
+<script defer>
+  const domContainer = document.querySelector('#hello-world');
+
+  const editor = CodeMirror.fromTextArea(document.getElementById("script_once_code"), {
+    lineNumbers: true,
+    mode: "javascript",
+    theme: "material-ocean"
+  });
+
+  editor.on("change", cm => compile(cm.getValue(), domContainer));
+  window.onload = () => compile(editor.getValue(), domContainer);
+</script>
