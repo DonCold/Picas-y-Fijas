@@ -9,6 +9,7 @@ Records.txt
 
 .DS_Store
 *.local
+.env
 
 build
 dist
