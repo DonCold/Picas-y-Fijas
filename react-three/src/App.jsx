@@ -27,7 +27,7 @@ function App() {
           <Matcap />
           <Bricks />
           <Environment
-            files={'assets/light/brown_photostudio_02_4k.hdr'}
+            files={'light/brown_photostudio_02_4k.hdr'}
           />
         </Suspense>
 

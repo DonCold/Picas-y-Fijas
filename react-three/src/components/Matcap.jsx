@@ -2,7 +2,7 @@ import { useLoader } from '@react-three/fiber'
 import { TextureLoader } from 'three/src/loaders/TextureLoader'
 
 const Matcap = () => {
-  const matcap = useLoader(TextureLoader, 'assets/matcap1.png')
+  const matcap = useLoader(TextureLoader, 'matcap1.png')
 
   return (
     <mesh position={[-4, 0, 0]}>
