@@ -9,7 +9,7 @@ const client = new RPC.Client({ transport: 'ipc' })
 const MINUTES = 50.5
 const ACTIVE_END = false
 const HOME_WORK = [0, 0]
-const DETAILS = DETAILS_LIST.testing
+const DETAILS = DETAILS_LIST.extra
 const DEFAULT_STATUS = '🐺 Guardando Datos'
 
 const STATE = HOME_WORK[1] === 0 ? DEFAULT_STATUS

@@ -60,5 +60,11 @@ export const DETAILS_LIST = {
     name: '🔥 Trabajando con NodeJS',
     description: 'Pruebas.. xD',
     image: 'image_1'
+  },
+
+  extra: {
+    name: '🚧 Diseñando',
+    description: 'En Adobe XD',
+    image: 'image_10'
   }
 }
