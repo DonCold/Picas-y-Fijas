@@ -3,10 +3,8 @@ __pycache__
 package-lock.json
 yarn.lock
 
-juego.exe
-Historial.txt
-Records.txt
-
+*.exe
+*.txt
 .DS_Store
 *.local
 .env
