@@ -1,0 +1,72 @@
+{
+  "name": "crud-products",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "co": "npm run lint && git add . && sui-mono commit",
+    "lint": "next lint",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "firebase": "9.8.1",
+    "firebase-admin": "10.2.0",
+    "jsonwebtoken": "8.5.1",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-data-table-component": "7.5.2",
+    "react-dom": "18.1.0",
+    "styled-components": "5.3.5",
+    "sweetalert2": "11.4.15",
+    "sweetalert2-react-content": "5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.0",
+    "@babel/eslint-parser": "7.17.0",
+    "@s-ui/mono": "2.27.0",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-standard": "17.0.0",
+    "eslint-config-standard-react": "11.0.1",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-n": "15.2.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.30.0",
+    "eslint-plugin-react-hooks": "4.5.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2020": true,
+      "node": true
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "extends": [
+      "next/core-web-vitals",
+      "standard",
+      "standard-react"
+    ],
+    "plugins": [
+      "react-hooks"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off"
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    ".next",
+    ".husky"
+  ]
+}
