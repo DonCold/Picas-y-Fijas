@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Luis F. Osorio",
+        "rol": "Desarrollador Back-end",
+        "descrip": "Estudiante de Ingeniería Informática a punto de iniciar el 5to semestre.",
+        "dom": "https://github.com/LuisFOsG",
+        "foto": "/images/fotoLuis.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Sergio A. Meléndez",
+        "rol": "Desarrollador Front-end",
+        "descrip": "Estudiante de Ingenieria Civil, ya finalizando la carrera, en busca de practicas.",
+        "dom": "https://github.com/SergioMelendez99",
+        "foto": "/images/fotoSergio.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Daniel D. Mejia",
+        "rol": "Analista de Software",
+        "descrip": "Ingeniero Industrial, con experiencia en logística y análisis de información",
+        "dom": "https://github.com/Danimev",
+        "foto": "/images/fotoDavid.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Andrea K. Calderon",
+        "rol": "Desarrollador Front-end",
+        "descrip": "Estudiante de Ingeniería de Sistemas y Computación, cursando 6 semestre.",
+        "dom": "https://github.com/AndreaC2",
+        "foto": "/images/fotoAndrea.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Jeisson Botache Yela",
+        "rol": "Desarrollador Back-end",
+        "descrip": "Ingeniero civil con ganas de cambiar de profesión",
+        "dom": "https://github.com/jeisson228",
+        "foto": "/images/fotoJeisson.jpg"
+    }
+]
